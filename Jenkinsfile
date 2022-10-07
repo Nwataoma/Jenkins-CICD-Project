@@ -46,9 +46,9 @@ pipeline {
     stage('SonarQube Scan') {
       steps {
         sh """mvn sonar:sonar \
-          -Dsonar.projectKey=JavaWebApp \
-          -Dsonar.host.url=http://3.238.25.9:9000 \
-          -Dsonar.login=5ebdae443408dfc38bb13742b1539a953a79976b"""
+           -Dsonar.projectKey=JavaWebApp \
+           -Dsonar.host.url=http://3.238.25.9:9000 \
+           -Dsonar.login=5ebdae443408dfc38bb13742b1539a953a79976b"""
       }
     }
     stage('Upload to Artifactory') {
